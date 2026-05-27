@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='UTF-8'?>
+    <!DOCTYPE html>
+    <head>
+        <script src='config.js'></script>
+        <title id='id_pageTitle'>[解锁地图]下载</title>
+    </head>
+    <style type='text/css'>
+        .container {
+        text-align: center;
+        font-size: 60px;
+        font-weight: bold;
+        padding-top: 1%;
+    }
+    </style>
+    <body> 
+        <div class='container'>
+            <font id='id_companyName' color='#440022' size='6'>aix9000.UnlockHome</font><br>
+            <font id='id_appName' color='#440022' size='10'>[ 解锁地图 ]</font><br>
+            <img src='QR-code.png' alt='二维码'>
+            <br>
+            <a id='id_ios_downUrl'href='https://testflight.apple.com/join/kbnJbfhX'>下载 ios</a>
+            </span></p> 
+            <a id='id_android_downUrl' href='Game.apk'>下载 安卓</a></span></p>
+            </span></p>
+            <a href='Game.zip'>下载 win.zip</a></span></p>
+            <br>
+            <video autoplay='autoplay' controls='controls' height='430' loop>
+                <source src='ScreenRecording2023-01-22 17.09.56.mp4'/>
+            </video> 
+            <br>
+        </div>
+	    <script>
+            document.getElementById('id_pageTitle').textContent = config.appName; 
+            document.getElementById('id_companyName').innerText = config.companyName;
+            document.getElementById('id_appName').innerText = config.appName  + '  (' + config.appVersion + ')【' + config.appNum + '】';
+            document.getElementById('id_android_downUrl').href = config.android_downUrl; 
+            document.getElementById('id_ios_downUrl').href = config.ios_downUrl; 
+	    </script>
+    </body>
+</html>
