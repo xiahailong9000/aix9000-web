@@ -1,0 +1,17 @@
+{
+  "page": {
+    "title": "批量翻译示例"
+  },
+  "home": {
+    "title": "首页11--英文",
+    "description": "这是一个使用key进行自动翻译的示例",
+    "button": "开始使用11"
+  },
+  "user": {
+    "name": {
+      "label": "姓名：",
+      "value": "张三"
+    },
+    "welcome": "欢迎，{{name}}！"
+  }
+}

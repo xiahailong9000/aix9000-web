@@ -1,0 +1,92 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html>
+<head>
+	<script src='config.js'></script>
+	<title id='id_pageTitle'>[TopMoney]下载</title>\
+	<style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        /*背景*/
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /*竖条白板*/
+        .card {
+            background: white;
+            border-radius: 20px;
+            padding: 4px;
+            max-width: 700px;
+            width: 90%;
+            text-align: center;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        }
+
+
+        .video-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+            margin: 20px 0;
+        }
+
+        .video-gallery video {
+            width: calc(33.33% - 7px); /* 三个视频并列，减去gap */
+            min-width: 110px;
+            height: auto;
+            border-radius: 1px;
+            background: #f0f0f0;
+            object-fit: cover;
+        }
+
+        /* 针对小屏幕的响应式调整 */
+        @media (max-width: 350px) {
+            .video-gallery video {
+                width: 100%; /* 超小屏幕时改为垂直排列 */
+            }
+        }
+	</style>
+</head>
+<body>
+	<div class='card'>
+		<br>
+		<h3 id='id_appName'>[ TopMoney ]</h3>
+		<br>
+		
+		<a id='id_ios_downUrl' href='https://testflight.apple.com/join/kbnJbfhX'> <img src="download_ios.png" alt="ios" height='70px'></a>
+		<a id='id_android_downUrl' href='Game.apk'><img src="download_android.png" alt="android" height='70px'></a>
+		
+		</span></p>
+		<div class="video-gallery">
+			<video autoplay muted loop playsinline>
+				<source src="explain/video_Paper.IO2.mp4" type="video/mp4">
+			</video>
+			<video autoplay muted loop playsinline>
+				<source src='explain/video_Trade.mp4' type="video/mp4">
+			</video>
+			<video autoplay muted loop playsinline>
+				<source src='explain/video_halo-Island.mov' type="video/mp4">
+			</video>
+		</div>
+		<img src='QR-code.png' alt='二维码'>
+		<br>
+	</div>
+	<script>
+        document.getElementById('id_pageTitle').textContent = config.appName;
+        document.getElementById('id_appName').innerText = config.companyName + '  (' + config.appVersion + ')【' + config.appNum + '】';
+        document.getElementById('id_android_downUrl').href = config.android_downUrl;
+        document.getElementById('id_ios_downUrl').href = config.ios_downUrl;
+	</script>
+</body>
+</html>
